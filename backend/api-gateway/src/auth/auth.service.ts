@@ -183,7 +183,7 @@ export class AuthService {
     return user;
   }
 
-  private async generateAuthResponse(user: User): Promise<AuthResponse> {
+  async generateAuthResponse(user: User): Promise<AuthResponse> {
     const payload: JwtPayload = {
       sub: user.id,
       email: user.email,
