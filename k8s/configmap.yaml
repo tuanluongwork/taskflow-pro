@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: taskflow-config
+  namespace: taskflow
+data:
+  NODE_ENV: "production"
+  API_GATEWAY_PORT: "3000"
+  AUTH_SERVICE_PORT: "3001"
+  USER_SERVICE_PORT: "3002"
+  TASK_SERVICE_PORT: "3003"
+  NOTIFICATION_SERVICE_PORT: "3004"
+  DATABASE_HOST: "postgres-service"
+  DATABASE_PORT: "5432"
+  DATABASE_NAME: "taskflow"
+  REDIS_HOST: "redis-service"
+  REDIS_PORT: "6379"
+  CORS_ORIGIN: "https://taskflow.example.com" 
