@@ -1,7 +1,5 @@
 # TaskFlow Pro - Enterprise Task Management System
 
-A modern, scalable task management system built with enterprise-grade technologies, demonstrating proficiency in full-stack development, microservices architecture, and cloud-native practices.
-
 ## 🚀 Tech Stack
 
 ### Backend
@@ -151,17 +149,3 @@ taskflow-pro/
 │   └── workflows/
 └── docs/
 ```
-
-## 🤝 Contributing
-
-This is a demonstration project showcasing enterprise development skills. Feel free to explore the codebase and architecture decisions.
-
-## 📄 License
-
-MIT License
-
----
-
-**Author**: Tuan Luong  
-**GitHub**: [@tuanluongwork](https://github.com/tuanluongwork)  
-**LinkedIn**: [Your LinkedIn Profile] 
