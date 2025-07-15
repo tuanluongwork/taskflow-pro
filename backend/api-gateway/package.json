@@ -49,6 +49,7 @@
     "passport-local": "^1.0.0",
     "pg": "^8.11.3",
     "reflect-metadata": "^0.1.14",
+    "sqlite3": "^5.1.6",
     "rxjs": "^7.8.1",
     "socket.io": "^4.6.2",
     "typeorm": "^0.3.17",

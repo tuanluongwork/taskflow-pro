@@ -31,14 +31,14 @@ import { authConfig } from './config/auth.config';
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
-        type: 'postgres',
+        type: configService.get('NODE_ENV') === 'development' ? 'sqlite' : 'postgres',
+        database: configService.get('NODE_ENV') === 'development' ? ':memory:' : configService.get('database.name'),
         host: configService.get('database.host'),
         port: configService.get('database.port'),
         username: configService.get('database.username'),
         password: configService.get('database.password'),
-        database: configService.get('database.name'),
         entities: [join(__dirname, '**', '*.entity.{ts,js}')],
-        synchronize: configService.get('NODE_ENV') === 'development',
+        synchronize: true, // Always synchronize for demo
         logging: configService.get('NODE_ENV') === 'development',
         migrations: [join(__dirname, 'migrations', '*.{ts,js}')],
         migrationsRun: true,

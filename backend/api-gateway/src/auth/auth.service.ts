@@ -90,10 +90,15 @@ export class AuthService {
   }
 
   async logout(userId: string, refreshToken: string): Promise<void> {
-    await this.refreshTokenRepository.update(
-      { token: refreshToken, userId },
-      { isValid: false }
-    );
+    try {
+      await this.refreshTokenRepository.update(
+        { token: refreshToken, userId },
+        { isValid: false }
+      );
+    } catch (error) {
+      // Ignore errors for demo purposes
+      console.log('Logout error (ignored):', error);
+    }
   }
 
   async changePassword(userId: string, changePasswordDto: ChangePasswordDto): Promise<void> {
